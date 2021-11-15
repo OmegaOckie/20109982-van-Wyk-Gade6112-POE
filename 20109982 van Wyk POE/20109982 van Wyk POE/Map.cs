@@ -36,6 +36,7 @@ namespace _20109982_van_Wyk_POE
             //Q.3.2 | The method randoms a height
             //and width for the map based on the minimum and maximum values
             //provided,
+            rng = new Random();
             mapWidth = rng.Next(minWidth, maxWidth);
             mapHeight = rng.Next(minHeight, maxHeight);
 
@@ -56,14 +57,14 @@ namespace _20109982_van_Wyk_POE
                 Create(Tile.TileType.ENEMY);
             }
 
-            foreach (var item in itemArray)
-            {
-                Create(Tile.TileType.GOLD);
-            }
+            //foreach (var item in itemArray)
+            //{
+            //    Create(Tile.TileType.GOLD);
+            //}
 
             //Q.3.2 | It then calls UpdateVision() which updates the vision
             //arrays of each Character with the Tiles around the character.
-            UpdateVision(mapTextBox);
+            //UpdateVision(mapTextBox);
         }
 
         /// <summary>
@@ -75,7 +76,7 @@ namespace _20109982_van_Wyk_POE
         {
 
 
-            rtb.Text = "";
+            rtb.Text = " ";
             for (int i = 0; i < mapWidth; i++)
             {
                 for (int o = 0; o < mapHeight; o++)
