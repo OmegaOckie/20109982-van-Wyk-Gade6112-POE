@@ -12,5 +12,10 @@ namespace _20109982_van_Wyk_POE
         {
 
         }
+
+        public override string ToString()
+        {
+            return " . ";
+        }
     }
 }

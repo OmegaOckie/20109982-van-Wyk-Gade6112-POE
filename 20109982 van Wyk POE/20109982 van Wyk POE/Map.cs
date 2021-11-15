@@ -20,17 +20,18 @@ namespace _20109982_van_Wyk_POE
         protected int mapHeight { get; set; }
         protected Random rng { get; set; }
         protected Item[,] itemArray { get; set; }
+        public RichTextBox mapTextBox { get; set; }
 
-            /// <summary>
-            /// Q.3.2 | A constructor that receives a minimum and maximum width, minimum and
-            /// maximum height and number of enemies.
-            /// </summary>
-            /// <param name="minWidth"></param>
-            /// <param name="maxWidth"></param>
-            /// <param name="minHeight"></param>
-            /// <param name="maxHeight"></param>
-            /// <param name="numOfEnemies"></param>
-            public Map(int minWidth, int maxWidth, int minHeight, int maxHeight, int numOfEnemies, int amountOfGold)
+        /// <summary>
+        /// Q.3.2 | A constructor that receives a minimum and maximum width, minimum and
+        /// maximum height and number of enemies.
+        /// </summary>
+        /// <param name="minWidth"></param>
+        /// <param name="maxWidth"></param>
+        /// <param name="minHeight"></param>
+        /// <param name="maxHeight"></param>
+        /// <param name="numOfEnemies"></param>
+        public Map(int minWidth, int maxWidth, int minHeight, int maxHeight, int numOfEnemies, int amountOfGold)
         {
             //Q.3.2 | The method randoms a height
             //and width for the map based on the minimum and maximum values
@@ -62,7 +63,7 @@ namespace _20109982_van_Wyk_POE
 
             //Q.3.2 | It then calls UpdateVision() which updates the vision
             //arrays of each Character with the Tiles around the character.
-            UpdateVision();
+            UpdateVision(mapTextBox);
         }
 
         /// <summary>

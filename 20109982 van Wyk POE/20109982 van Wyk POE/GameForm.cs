@@ -15,11 +15,19 @@ namespace _20109982_van_Wyk_POE
         public GameForm()
         {
             InitializeComponent();
+            GameEngine myGameEngine = new GameEngine(5,10,5,10,10);
+
+            myGameEngine.mapTextBox = mapRichTextBox;
         }
 
         private void label1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
+        {
+            return base.ProcessCmdKey(ref msg, keyData);
         }
     }
 }

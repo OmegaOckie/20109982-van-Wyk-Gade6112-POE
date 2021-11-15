@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace _20109982_van_Wyk_POE
 {
@@ -11,12 +12,18 @@ namespace _20109982_van_Wyk_POE
     {
         //Q.3.3 | Declare variables
         private Map myMap {get; set;}
-
+        public RichTextBox mapTextBox { get; set; }
+        
+        
+        
         public GameEngine(int inputMapMinWidth, int inputMapMaxWidth, int inputMapMinHeight, int inputMapMaxHeight, int amountOfGold)
         {
             //Creates a Map object with hardcoded amount of enemies
             myMap = new Map(inputMapMinWidth, inputMapMaxWidth, inputMapMinHeight, inputMapMaxHeight, 5, amountOfGold);
+            myMap.mapTextBox = mapTextBox;
         }
+
+
 
         public bool MovePlayer(Character.Movement direction)
         {

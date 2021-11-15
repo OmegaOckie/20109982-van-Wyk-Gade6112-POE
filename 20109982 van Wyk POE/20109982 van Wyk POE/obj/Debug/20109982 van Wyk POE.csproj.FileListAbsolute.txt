@@ -1,0 +1,9 @@
+C:\Users\ockie\OneDrive\Documents\VEGA\2nd Year\Semester 2\GADE6112\POE\20109982-van-Wyk-Gade6112-POE\20109982 van Wyk POE\20109982 van Wyk POE\obj\Debug\20109982 van Wyk POE.csprojAssemblyReference.cache
+C:\Users\ockie\OneDrive\Documents\VEGA\2nd Year\Semester 2\GADE6112\POE\20109982-van-Wyk-Gade6112-POE\20109982 van Wyk POE\20109982 van Wyk POE\obj\Debug\_20109982_van_Wyk_POE.GameForm.resources
+C:\Users\ockie\OneDrive\Documents\VEGA\2nd Year\Semester 2\GADE6112\POE\20109982-van-Wyk-Gade6112-POE\20109982 van Wyk POE\20109982 van Wyk POE\obj\Debug\20109982 van Wyk POE.csproj.GenerateResource.cache
+C:\Users\ockie\OneDrive\Documents\VEGA\2nd Year\Semester 2\GADE6112\POE\20109982-van-Wyk-Gade6112-POE\20109982 van Wyk POE\20109982 van Wyk POE\obj\Debug\20109982 van Wyk POE.csproj.CoreCompileInputs.cache
+C:\Users\ockie\OneDrive\Documents\VEGA\2nd Year\Semester 2\GADE6112\POE\20109982-van-Wyk-Gade6112-POE\20109982 van Wyk POE\20109982 van Wyk POE\bin\Debug\20109982 van Wyk POE.exe.config
+C:\Users\ockie\OneDrive\Documents\VEGA\2nd Year\Semester 2\GADE6112\POE\20109982-van-Wyk-Gade6112-POE\20109982 van Wyk POE\20109982 van Wyk POE\bin\Debug\20109982 van Wyk POE.exe
+C:\Users\ockie\OneDrive\Documents\VEGA\2nd Year\Semester 2\GADE6112\POE\20109982-van-Wyk-Gade6112-POE\20109982 van Wyk POE\20109982 van Wyk POE\bin\Debug\20109982 van Wyk POE.pdb
+C:\Users\ockie\OneDrive\Documents\VEGA\2nd Year\Semester 2\GADE6112\POE\20109982-van-Wyk-Gade6112-POE\20109982 van Wyk POE\20109982 van Wyk POE\obj\Debug\20109982 van Wyk POE.exe
+C:\Users\ockie\OneDrive\Documents\VEGA\2nd Year\Semester 2\GADE6112\POE\20109982-van-Wyk-Gade6112-POE\20109982 van Wyk POE\20109982 van Wyk POE\obj\Debug\20109982 van Wyk POE.pdb

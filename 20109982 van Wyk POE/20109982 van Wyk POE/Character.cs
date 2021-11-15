@@ -48,9 +48,9 @@ namespace _20109982_van_Wyk_POE
         /// Q.2.3 | Checks if the character is dead.
         /// </summary>
         /// <returns></returns>
-        public bool IsDead()
+        public bool IsDead(Character target)
         {
-            if (HP < 1)
+            if (target.HP < 1)
             {
                 return true;
             }
