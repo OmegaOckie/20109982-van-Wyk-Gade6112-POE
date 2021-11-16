@@ -44,7 +44,7 @@ namespace _20109982_van_Wyk_POE
             // playerStatsLabel
             // 
             this.playerStatsLabel.AutoSize = true;
-            this.playerStatsLabel.Location = new System.Drawing.Point(13, 13);
+            this.playerStatsLabel.Location = new System.Drawing.Point(12, 187);
             this.playerStatsLabel.Name = "playerStatsLabel";
             this.playerStatsLabel.Size = new System.Drawing.Size(63, 13);
             this.playerStatsLabel.TabIndex = 0;
@@ -54,7 +54,7 @@ namespace _20109982_van_Wyk_POE
             // playerStatsDisplayed
             // 
             this.playerStatsDisplayed.AutoSize = true;
-            this.playerStatsDisplayed.Location = new System.Drawing.Point(12, 26);
+            this.playerStatsDisplayed.Location = new System.Drawing.Point(12, 200);
             this.playerStatsDisplayed.Name = "playerStatsDisplayed";
             this.playerStatsDisplayed.Size = new System.Drawing.Size(63, 13);
             this.playerStatsDisplayed.TabIndex = 1;
@@ -123,9 +123,9 @@ namespace _20109982_van_Wyk_POE
             // 
             // mapRichTextBox
             // 
-            this.mapRichTextBox.Location = new System.Drawing.Point(15, 43);
+            this.mapRichTextBox.Location = new System.Drawing.Point(12, 12);
             this.mapRichTextBox.Name = "mapRichTextBox";
-            this.mapRichTextBox.Size = new System.Drawing.Size(234, 337);
+            this.mapRichTextBox.Size = new System.Drawing.Size(234, 172);
             this.mapRichTextBox.TabIndex = 9;
             this.mapRichTextBox.Text = "";
             // 
