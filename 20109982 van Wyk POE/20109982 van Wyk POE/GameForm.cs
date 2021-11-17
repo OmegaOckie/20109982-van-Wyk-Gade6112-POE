@@ -15,9 +15,10 @@ namespace _20109982_van_Wyk_POE
         public GameForm()
         {
             InitializeComponent();
-            GameEngine myGameEngine = new GameEngine(5,10,5,10,10);
+            GameEngine myGameEngine = new GameEngine(5,15, 5, 15, 10);
 
             myGameEngine.mapTextBox = mapRichTextBox;
+            myGameEngine.Redrawmap();
         }
 
         private void label1_Click(object sender, EventArgs e)

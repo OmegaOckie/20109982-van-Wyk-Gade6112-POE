@@ -37,25 +37,67 @@ namespace _20109982_van_Wyk_POE
             //and width for the map based on the minimum and maximum values
             //provided,
             rng = new Random();
-            mapWidth = rng.Next(minWidth, maxWidth);
-            mapHeight = rng.Next(minHeight, maxHeight);
+            while (mapWidth == 0 || mapHeight == 0)
+            {
+                    mapWidth = rng.Next(minWidth, maxWidth);
+                    mapHeight = rng.Next(minHeight, maxHeight);
+            }
+
 
             //Q.3.2 | creates a new 2D Tile array of that size
             mapArray = new Tile[mapWidth, mapHeight];
 
+            for (int i = 0; i < mapWidth; i++)
+            {
+                for (int j = 0; j < mapHeight; j++)
+                {
+                    mapArray[i, j] = new EmptyTile(i , j);
+                }
+            }
+
+            for (int y = 0; y <= mapHeight; y++)
+            {
+                if (y == mapHeight || y > mapHeight)
+                {
+                    break;
+                }
+                else
+                {
+                    //mapArray[mapHeight, y] = new Obstacle(mapHeight, y);
+                    //mapArray[0, y] = new Obstacle(0, y);
+                    mapArray[mapHeight, y] = new Obstacle(mapHeight, y);
+                    mapArray[0, y] = new Obstacle(0, y);
+                }
+            }
+
+            for (int x = 0; x <= mapWidth; x++)
+            {
+                if (x == mapWidth || x > mapWidth)
+                {
+                    break;
+                }
+                else
+                {
+                    mapArray[x, mapWidth] = new Obstacle(x, mapWidth);
+                    mapArray[x, 0] = new Obstacle(x, 0);
+                    //mapArray[x, mapWidth] = new Obstacle(x, mapWidth);
+                    //mapArray[0, x] = new Obstacle(0, x);
+                }
+
+            }
             //Q.3.2 | It also creates a new Enemy array based on the
             //provided size
             enemyArray = new Enemy[numOfEnemies];
 
             //Q.3.2 | The constructor calls Create() to create the Hero
-            Create(Tile.TileType.HERO);
+            //Create(Tile.TileType.HERO);
 
             //Q.3.2 | loops through the enemy’s array calling Create() to create each enemy and puts
             //them in the Tile map
-            foreach (var enemy in enemyArray)
-            {
-                Create(Tile.TileType.ENEMY);
-            }
+            //foreach (var enemy in enemyArray)
+            //{
+            //    Create(Tile.TileType.ENEMY);
+            //}
 
             //foreach (var item in itemArray)
             //{
@@ -181,6 +223,25 @@ namespace _20109982_van_Wyk_POE
                 }
             }
             return null;
+        }
+
+        public string DisplayMap()
+        {
+
+            string temp = "";
+            for (int i = 0; i < mapWidth -1; i++)
+            {
+                for (int j = 0; j < mapHeight -1; j++)
+                {
+                    if (mapArray[i,j] == null)
+                    {
+                        temp += "N";
+                    }
+                    temp += mapArray[i, j].ToString();
+                }
+                temp += "\n";
+            }
+            return temp;
         }
     }
 }

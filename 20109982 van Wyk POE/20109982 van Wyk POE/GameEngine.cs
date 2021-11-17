@@ -19,7 +19,7 @@ namespace _20109982_van_Wyk_POE
         public GameEngine(int inputMapMinWidth, int inputMapMaxWidth, int inputMapMinHeight, int inputMapMaxHeight, int amountOfGold)
         {
             //Creates a Map object with hardcoded amount of enemies
-            myMap = new Map(inputMapMinWidth, inputMapMaxWidth, inputMapMinHeight, inputMapMaxHeight, 5, amountOfGold);
+            myMap = new Map(inputMapMinWidth, inputMapMaxWidth, inputMapMinHeight, inputMapMaxHeight, 0, amountOfGold);
             myMap.mapTextBox = mapTextBox;
         }
 
@@ -66,6 +66,11 @@ namespace _20109982_van_Wyk_POE
         private void MoveEnemeies()
         {
 
+        }
+
+        public void Redrawmap()
+        {
+            mapTextBox.Text = myMap.DisplayMap();
         }
     }
 }
