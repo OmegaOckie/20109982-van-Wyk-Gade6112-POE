@@ -123,6 +123,7 @@ namespace _20109982_van_Wyk_POE
             // 
             // mapRichTextBox
             // 
+            this.mapRichTextBox.Font = new System.Drawing.Font("Monospac821 BT", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mapRichTextBox.Location = new System.Drawing.Point(12, 12);
             this.mapRichTextBox.Name = "mapRichTextBox";
             this.mapRichTextBox.Size = new System.Drawing.Size(234, 172);

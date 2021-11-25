@@ -39,10 +39,9 @@ namespace _20109982_van_Wyk_POE
             rng = new Random();
             while (mapWidth == 0 || mapHeight == 0)
             {
-                    mapWidth = rng.Next(minWidth, maxWidth);
-                    mapHeight = rng.Next(minHeight, maxHeight);
+                mapWidth = rng.Next(minWidth, maxWidth);
+                mapHeight = rng.Next(minHeight, maxHeight);
             }
-
 
             //Q.3.2 | creates a new 2D Tile array of that size
             mapArray = new Tile[mapWidth, mapHeight];
@@ -55,36 +54,21 @@ namespace _20109982_van_Wyk_POE
                 }
             }
 
-            for (int y = 0; y <= mapHeight; y++)
+
+            // Places the border of the Map
+            for (int x = 0; x < mapWidth; x++)
             {
-                if (y == mapHeight || y > mapHeight)
+                for (int y = 0; y < mapHeight; y++)
                 {
-                    break;
-                }
-                else
-                {
-                    //mapArray[mapHeight, y] = new Obstacle(mapHeight, y);
-                    //mapArray[0, y] = new Obstacle(0, y);
-                    mapArray[mapHeight, y] = new Obstacle(mapHeight, y);
-                    mapArray[0, y] = new Obstacle(0, y);
+                    if (y == mapHeight -1 || y ==0 || x == mapWidth -1|| x == 0)
+                    {
+                        mapArray[x, y] = new Obstacle(x, y);
+                    }
                 }
             }
 
-            for (int x = 0; x <= mapWidth; x++)
-            {
-                if (x == mapWidth || x > mapWidth)
-                {
-                    break;
-                }
-                else
-                {
-                    mapArray[x, mapWidth] = new Obstacle(x, mapWidth);
-                    mapArray[x, 0] = new Obstacle(x, 0);
-                    //mapArray[x, mapWidth] = new Obstacle(x, mapWidth);
-                    //mapArray[0, x] = new Obstacle(0, x);
-                }
 
-            }
+            //}
             //Q.3.2 | It also creates a new Enemy array based on the
             //provided size
             enemyArray = new Enemy[numOfEnemies];
@@ -229,9 +213,9 @@ namespace _20109982_van_Wyk_POE
         {
 
             string temp = "";
-            for (int i = 0; i < mapWidth -1; i++)
+            for (int i = 0; i < mapWidth; i++)
             {
-                for (int j = 0; j < mapHeight -1; j++)
+                for (int j = 0; j < mapHeight; j++)
                 {
                     if (mapArray[i,j] == null)
                     {
