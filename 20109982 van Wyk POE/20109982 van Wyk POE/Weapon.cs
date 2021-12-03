@@ -14,7 +14,7 @@ namespace _20109982_van_Wyk_POE
         protected int cost { get; set; }
         protected string weaponType { get; set; }
 
-        public Weapon(char symbol, int weaponXPos, int weaponYPos) : base(weaponXPos, weaponYPos)
+        public Weapon(char symbol, int optionalWeaponXPos = 0, int optionalWeaponYPos = 0) : base(optionalWeaponXPos, optionalWeaponYPos)
         {
 
         }
