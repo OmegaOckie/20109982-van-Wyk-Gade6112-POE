@@ -13,13 +13,15 @@ namespace _20109982_van_Wyk_POE
         //Q.3.3 | Declare variables
         private Map myMap {get; set;}
         public RichTextBox mapTextBox { get; set; }
+
+        //Shop myShop = new Shop(player);
         
         
         
-        public GameEngine(int inputMapMinWidth, int inputMapMaxWidth, int inputMapMinHeight, int inputMapMaxHeight, int amountOfGold)
+        public GameEngine(int inputMapMinWidth, int inputMapMaxWidth, int inputMapMinHeight, int inputMapMaxHeight, int amountOfGold, int weaponDrops)
         {
             //Creates a Map object with hardcoded amount of enemies
-            myMap = new Map(inputMapMinWidth, inputMapMaxWidth, inputMapMinHeight, inputMapMaxHeight, 0, amountOfGold);
+            myMap = new Map(inputMapMinWidth, inputMapMaxWidth, inputMapMinHeight, inputMapMaxHeight, 0, amountOfGold, weaponDrops);
             myMap.mapTextBox = mapTextBox;
         }
 

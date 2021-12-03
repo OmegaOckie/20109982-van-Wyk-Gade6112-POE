@@ -16,7 +16,9 @@ namespace _20109982_van_Wyk_POE
 
         protected Tile[] characterVision;// = new Tile[4];
 
-        protected int characterGoldPurse { get; set; }
+        public int characterGoldPurse { get; set; }
+
+        protected Weapon characterWeapon { get; set; }
 
         public enum Movement
         {
@@ -169,6 +171,16 @@ namespace _20109982_van_Wyk_POE
                 default:
                     break;
             }
+        }
+
+        private void Equip(Weapon w)
+        {
+            characterWeapon = w;
+        }
+
+        public void loot(Character target)
+        {
+            this.characterGoldPurse += target.characterGoldPurse;
         }
 
         /// <summary>

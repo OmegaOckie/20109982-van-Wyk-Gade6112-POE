@@ -22,6 +22,7 @@ namespace _20109982_van_Wyk_POE
             x = goblinX;
             y = goblinY;
             HP = 10;
+            characterWeapon = new MeleeWeapon(MeleeWeapon.Types.DAGGER, 999, 999);
         }
 
         /// <summary>

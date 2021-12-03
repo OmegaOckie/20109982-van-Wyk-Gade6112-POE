@@ -10,14 +10,15 @@ namespace _20109982_van_Wyk_POE
     {
         protected int damage { get; set; }
         virtual protected int range { get; set; }
-        protected int durability { get; set; }
-        protected int cost { get; set; }
+        public int durability { get; set; }
+        public int cost { get; set; }
         protected string weaponType { get; set; }
 
         public Weapon(char symbol, int optionalWeaponXPos = 0, int optionalWeaponYPos = 0) : base(optionalWeaponXPos, optionalWeaponYPos)
         {
 
         }
+
 
 
     }

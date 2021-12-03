@@ -50,11 +50,31 @@ namespace _20109982_van_Wyk_POE
 
         public override string ToString()
         {
-            return "Player Stats:" +
-                "\n HP:" + HP + "/" + MaxHP +
-                "\n Gold Amount: " + characterGoldPurse +
-                "\n Damage: 2" +
-                "\n [" + x + ", " + y + "]";
+            if (characterWeapon == null)
+            {
+                return "Player Stats:" +
+    "\n HP:" + HP + "/" + MaxHP +
+    "\n Current Weapon: barehanded" +
+    "\n Weapon Range: " + 1 +
+    "\n Weapon damage: " + Damage +
+    "\n Gold: " + characterGoldPurse;
+            }
+            else
+            {
+                return "Player Stats:" +
+"\n HP:" + HP + "/" + MaxHP +
+"\n Current Weapon: " + characterWeapon +
+"\n Weapon Range: " + 2 +
+"\n Weapon damage: " + Damage +
+"\n Durability: " + characterWeapon.durability +
+"\n Gold: " + characterGoldPurse;
+            }
+
+            //return "Player Stats:" +
+            //    "\n HP:" + HP + "/" + MaxHP +
+            //    "\n Gold Amount: " + characterGoldPurse +
+            //    "\n Damage: 2" +
+            //    "\n [" + x + ", " + y + "]";
         }
     }
 }

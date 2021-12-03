@@ -14,8 +14,12 @@ namespace _20109982_van_Wyk_POE
     {
         public GameForm()
         {
+            
             InitializeComponent();
-            GameEngine myGameEngine = new GameEngine(5,15, 5, 15, 10);
+            Random rng = new Random();
+            int randomAmountOfWeapons = rng.Next(4);
+            int randomAmountOfGold = rng.Next(4);
+            GameEngine myGameEngine = new GameEngine(5,15, 5, 15, randomAmountOfGold, randomAmountOfWeapons);
 
             myGameEngine.mapTextBox = mapRichTextBox;
             myGameEngine.Redrawmap();

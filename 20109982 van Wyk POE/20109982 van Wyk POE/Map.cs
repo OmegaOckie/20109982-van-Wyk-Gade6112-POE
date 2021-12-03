@@ -31,7 +31,7 @@ namespace _20109982_van_Wyk_POE
         /// <param name="minHeight"></param>
         /// <param name="maxHeight"></param>
         /// <param name="numOfEnemies"></param>
-        public Map(int minWidth, int maxWidth, int minHeight, int maxHeight, int numOfEnemies, int amountOfGold)
+        public Map(int minWidth, int maxWidth, int minHeight, int maxHeight, int numOfEnemies, int amountOfGold, int weaponDrops)
         {
             //Q.3.2 | The method randoms a height
             //and width for the map based on the minimum and maximum values
@@ -74,7 +74,7 @@ namespace _20109982_van_Wyk_POE
             enemyArray = new Enemy[numOfEnemies];
 
             //Q.3.2 | The constructor calls Create() to create the Hero
-            //Create(Tile.TileType.HERO);
+            Create(Tile.TileType.HERO);
 
             //Q.3.2 | loops through the enemy’s array calling Create() to create each enemy and puts
             //them in the Tile map
@@ -164,7 +164,7 @@ namespace _20109982_van_Wyk_POE
             //generates a random enemy
             Random randomEnemy = new Random();
             int chosenEnemy = randomEnemy.Next(1, 3);
-
+            
             int numOfEnemies = 0;
 
             switch (type)
@@ -175,15 +175,41 @@ namespace _20109982_van_Wyk_POE
                 case Tile.TileType.ENEMY:
                     mapArray[xPos, yPos] = enemyArray[numOfEnemies];
                     numOfEnemies++;
-                    if (chosenEnemy == 1)
+                    switch (chosenEnemy)
                     {
-                        return enemyArray[numOfEnemies] = new Goblin(xPos, yPos);
+                        case 1:
+                            return enemyArray[numOfEnemies] = new Goblin(xPos, yPos);
+                            break;
+                        case 2:
+                            return enemyArray[numOfEnemies] = new Leader(xPos, yPos);
+                            break;
+                        default:
+                            break;
                     }
                     break;
                 case Tile.TileType.GOLD:
                     return itemArray[xPos, yPos] = new Gold(xPos, yPos);
                     break;
                 case Tile.TileType.WEAPON:
+
+                    int randomWeapon = rng.Next(4);
+                    switch (randomWeapon)
+                    {
+                        case 0:
+                            return itemArray[xPos, yPos] = new MeleeWeapon(MeleeWeapon.Types.DAGGER, xPos, yPos);
+                            break;
+                        case 1:
+                            return itemArray[xPos, yPos] = new MeleeWeapon(MeleeWeapon.Types.LONGSWORD, xPos, yPos);
+                            break;
+                        case 2:
+                            return itemArray[xPos, yPos] = new RangedWeapon(RangedWeapon.Types.LONGBOW, xPos, yPos);
+                            break;
+                        case 3:
+                            return itemArray[xPos, yPos] = new RangedWeapon(RangedWeapon.Types.RIFLE, xPos, yPos);
+                            break;
+                        default:
+                            break;
+                    }
                     break;
                 default:
                     break;

@@ -39,12 +39,13 @@ namespace _20109982_van_Wyk_POE
             this.attackButton = new System.Windows.Forms.Button();
             this.gameHistoryTextBox = new System.Windows.Forms.RichTextBox();
             this.mapRichTextBox = new System.Windows.Forms.RichTextBox();
+            this.listBox1 = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
             // playerStatsLabel
             // 
             this.playerStatsLabel.AutoSize = true;
-            this.playerStatsLabel.Location = new System.Drawing.Point(12, 187);
+            this.playerStatsLabel.Location = new System.Drawing.Point(9, 238);
             this.playerStatsLabel.Name = "playerStatsLabel";
             this.playerStatsLabel.Size = new System.Drawing.Size(63, 13);
             this.playerStatsLabel.TabIndex = 0;
@@ -54,7 +55,7 @@ namespace _20109982_van_Wyk_POE
             // playerStatsDisplayed
             // 
             this.playerStatsDisplayed.AutoSize = true;
-            this.playerStatsDisplayed.Location = new System.Drawing.Point(12, 200);
+            this.playerStatsDisplayed.Location = new System.Drawing.Point(9, 251);
             this.playerStatsDisplayed.Name = "playerStatsDisplayed";
             this.playerStatsDisplayed.Size = new System.Drawing.Size(63, 13);
             this.playerStatsDisplayed.TabIndex = 1;
@@ -126,15 +127,28 @@ namespace _20109982_van_Wyk_POE
             this.mapRichTextBox.Font = new System.Drawing.Font("Monospac821 BT", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mapRichTextBox.Location = new System.Drawing.Point(12, 12);
             this.mapRichTextBox.Name = "mapRichTextBox";
-            this.mapRichTextBox.Size = new System.Drawing.Size(234, 172);
+            this.mapRichTextBox.Size = new System.Drawing.Size(378, 223);
             this.mapRichTextBox.TabIndex = 9;
             this.mapRichTextBox.Text = "";
+            // 
+            // listBox1
+            // 
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3"});
+            this.listBox1.Location = new System.Drawing.Point(414, 12);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(120, 95);
+            this.listBox1.TabIndex = 10;
             // 
             // GameForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.listBox1);
             this.Controls.Add(this.mapRichTextBox);
             this.Controls.Add(this.gameHistoryTextBox);
             this.Controls.Add(this.attackButton);
@@ -164,5 +178,6 @@ namespace _20109982_van_Wyk_POE
         private System.Windows.Forms.Button attackButton;
         private System.Windows.Forms.RichTextBox gameHistoryTextBox;
         private System.Windows.Forms.RichTextBox mapRichTextBox;
+        private System.Windows.Forms.ListBox listBox1;
     }
 }

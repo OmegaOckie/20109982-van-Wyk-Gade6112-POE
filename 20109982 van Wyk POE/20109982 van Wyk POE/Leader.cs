@@ -12,7 +12,7 @@ namespace _20109982_van_Wyk_POE
 
         public Leader(int enemyXPos, int enemyYPos) : base (enemyXPos, enemyYPos, 2, 20, 'L')
         {
-            
+            characterWeapon = new MeleeWeapon(MeleeWeapon.Types.LONGSWORD, 999, 999);
         }
 
         public override Movement ReturnMove(Movement move = Movement.NONE)
